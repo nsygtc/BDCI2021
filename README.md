@@ -16,4 +16,9 @@
 - visualization.py：用来对数据集进行预处理，并将处理后的数据进行可视化的工作。
 - preprocess.py：第一阶段特征工程，主要是用内部ID替换原数据中的ID，便于矩阵化表示，以及按人员/特征码重新统计数据。
 - detail.py：第二阶段特征工程，在第一阶段的基础上进行。对每一个人员以及特征码统计了20维特征，供学习算法使用。
--
+- analysis_and_presort.py: 统计分析匹配人员ID和设备ID的时间间隔。预排序挑选200个样本作为候选集。划分训练集，验证集和测试集。
+- features.py 根据pid和cid获取每条样本的特征。
+- model_select.py: 初步比较多种分类模型效果。
+- search_xxx.py: 网格搜索调参。
+- test.py: 调参后的分类模型在测试集上的结果。
+- ranker_xxx.py: learning to rank方法在测试集上的结果。
